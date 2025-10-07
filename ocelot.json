@@ -1,0 +1,462 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:7129"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/auth/login",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7246
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Users"
+    },
+    {
+      "UpstreamPathTemplate": "/register",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/auth/register",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7246
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Users"
+    },
+    {
+      "UpstreamPathTemplate": "/me",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/users/me",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7246
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Users"
+    },
+    {
+      "UpstreamPathTemplate": "/users",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7246
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Users"
+    },
+    {
+      "UpstreamPathTemplate": "/users/{userId}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/users/{userId}",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7246
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Users"
+    },
+    {
+      "UpstreamPathTemplate": "/games",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/games",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7032
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Games"
+    },
+    {
+      "UpstreamPathTemplate": "/games/my-games",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/games/my-games",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7032
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Games"
+    },
+    {
+      "UpstreamPathTemplate": "/games",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/games",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7032
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Games"
+    },
+    {
+      "UpstreamPathTemplate": "/games/{gameId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/games/{gameId}",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7032
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Games"
+    },
+    {
+      "UpstreamPathTemplate": "/games/{gameId}",
+      "UpstreamHttpMethod": [ "DELETE", "PATCH" ],
+      "DownstreamPathTemplate": "/api/games/{gameId}",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7032
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Games"
+    },
+    {
+      "UpstreamPathTemplate": "/games/most-popular",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/games/most-popular",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7032
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Games"
+    },
+    {
+      "UpstreamPathTemplate": "/games/based-user-history",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/games/based-user-history",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7032
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Games"
+    },
+    {
+      "UpstreamPathTemplate": "/orders",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/orders",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7032
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Games"
+    },
+    //{
+    //  "SwaggerKey": "games",
+    //  "UpstreamPathTemplate": "/orders/{orderId}/update-paymentId/{paymentId}",
+    //  "UpstreamHttpMethod": [ "PATCH" ],
+    //  "DownstreamPathTemplate": "/api/orders/{orderId}/update-paymentId/{paymentId}",
+    //  "DownstreamScheme": "https",
+    //  "UpstreamHeaderTransform": {
+    //    "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+    //  },
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 7032
+    //    }
+    //  ],
+    //  "RateLimitOptions": {
+    //    "EnableRateLimiting": true,
+    //    "Limit": 1,
+    //    "Period": "1s",
+    //    "PeriodTimespan": 1
+    //  }
+    //},
+    //{
+    //  "SwaggerKey": "games",
+    //  "UpstreamPathTemplate": "/orders/{orderId}/unlock-games",
+    //  "UpstreamHttpMethod": [ "PATCH" ],
+    //  "DownstreamPathTemplate": "/api/orders/{orderId}/unlock-games",
+    //  "DownstreamScheme": "https",
+    //  "UpstreamHeaderTransform": {
+    //    "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+    //  },
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 7032
+    //    }
+    //  ],
+    //  "RateLimitOptions": {
+    //    "EnableRateLimiting": true,
+    //    "Limit": 1,
+    //    "Period": "1s",
+    //    "PeriodTimespan": 1
+    //  }
+    //},
+    //{
+    //  "SwaggerKey": "games",
+    //  "UpstreamPathTemplate": "/orders/{orderId}/cancel",
+    //  "UpstreamHttpMethod": [ "PATCH" ],
+    //  "DownstreamPathTemplate": "/api/orders/{orderId}/cancel",
+    //  "DownstreamScheme": "https",
+    //  "UpstreamHeaderTransform": {
+    //    "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+    //  },
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 7032
+    //    }
+    //  ],
+    //  "RateLimitOptions": {
+    //    "EnableRateLimiting": true,
+    //    "Limit": 1,
+    //    "Period": "1s",
+    //    "PeriodTimespan": 1
+    //  }
+    //}
+    {
+      "UpstreamPathTemplate": "/payments",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/payments",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7190
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Payments"
+    },
+    {
+      "UpstreamPathTemplate": "/payments/{paymentId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/payments/{paymentId}",
+      "DownstreamScheme": "https",
+      "UpstreamHeaderTransform": {
+        "X-Internal-Auth": "S/7!G>Tj>a0ak=XcwzKq"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7190
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Limit": 1,
+        "Period": "1s",
+        "PeriodTimespan": 1
+      },
+      "SwaggerKey": "Payments"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "Users",
+      "Config": [
+        {
+          "Name": "Users API",
+          "Version": "v1",
+          "Url": "https://localhost:7246/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Games",
+      "Config": [
+        {
+          "Name": "Games API",
+          "Version": "v1",
+          "Url": "https://localhost:7032/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Payments",
+      "Config": [
+        {
+          "Name": "Payments API",
+          "Version": "v1",
+          "Url": "https://localhost:7190/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
