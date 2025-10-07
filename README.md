@@ -20,7 +20,7 @@ git clone https://github.com/MarioGuilherme/FiapCloudGames.Gateway
 
   2 - Insira o comando de execução do projeto:
   ```
-  dotnet run
+  dotnet run --launch-profile https
   ```
 
   3 - Acesse https://localhost:7129/swagger/index.html
